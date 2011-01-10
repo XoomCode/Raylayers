@@ -1,3 +1,17 @@
+# Installation
+
+In your Gemfile, add this line:
+
+  gem "raylayers"
+  
+Then, run bundle install. To invoke the generator, run:
+
+  rails generate raylayers:install
+  
+You're done!
+
+_ P.S.: python is required to build OpenLayers
+
 QQQQQQQY: .-^.,vwwmQQQQQQQmmgwc;-~!QWQQQQQQQQQQQQQQQQQQQQQQQ
 QQQQQQf=} .. vmmWQQQQQQQQQQQQmdAwwaw@YQQQQQQ OpenLayers QQQQ
 QQQQQ@'s _amQWQQQQQQQQQQQQQQQQQmd$W$as/WQQQQ    for     QQQQ
@@ -28,17 +42,4 @@ QQQQQQQQQQQQQw,  ~="YVW$QQQ@("!Y!~            3c-k         -
 QQQQQQQQQQQQQQQc      -~)Y!+ -               =|m.k
 QQQQQQQQQQQWQB?                             _wd( 3p
 QQQQQQWD?!~-                               :(  .%=$1,
-
-Installation
-
-In your Gemfile, add this line:
-
-  gem "raylayers"
-  
-Then, run bundle install. To invoke the generator, run:
-
-  rails generate raylayers:install
-  
-You're done! 
-
 
