@@ -1,8 +1,9 @@
-# Installation
+Installation
 
 In your Gemfile, add this line:
 
   gem "raylayers"
+ 
   
 Then, run bundle install. To invoke the generator, run:
 
@@ -10,7 +11,8 @@ Then, run bundle install. To invoke the generator, run:
   
 You're done!
 
-_ P.S.: python is required to build OpenLayers
+P.S.: python is required to build OpenLayers
+
 
 QQQQQQQY: .-^.,vwwmQQQQQQQmmgwc;-~!QWQQQQQQQQQQQQQQQQQQQQQQQ
 QQQQQQf=} .. vmmWQQQQQQQQQQQQmdAwwaw@YQQQQQQ OpenLayers QQQQ
