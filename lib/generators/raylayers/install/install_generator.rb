@@ -31,7 +31,10 @@ module Raylayers
       
       def build_openlayers
         say_status("building", "OpenLayers (#{options.version})", :green)
-        #system("python build.py")
+        # TODO: ruby script?
+        Dir.chdir("tmp/OpenLayers-#{options.version}/build"){ system("python build.py 1> /dev/null")}
+      rescue
+        say_status("error", "could not build OpenLayers", :red)
       end
       
       def install_openlayers
