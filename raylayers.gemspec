@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Fabio R. Panettieri"]
   s.email       = ["fpanettieri@xoomcode.com"]
-  s.homepage    = "http://www.xoomcode.com/projects/raylayers"
+  s.homepage    = ""
   s.summary     = %q{OpenLayers for Rails}
   s.description = %q{This gem provides a Rails generator to install OpenLayers into your Rails 3 app}
 
