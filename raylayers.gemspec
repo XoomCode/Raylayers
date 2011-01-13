@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email       = ["fpanettieri@xoomcode.com"]
   s.homepage    = "http://www.xoomcode.com/projects/raylayers"
   s.summary     = %q{OpenLayers for Rails}
-  s.description = %q{"This gem provides a Rails generator to install OpenLayers into your Rails 3 app}
+  s.description = %q{This gem provides a Rails generator to install OpenLayers into your Rails 3 app}
 
   s.rubyforge_project = "raylayers"
 
