@@ -52,6 +52,13 @@ module Raylayers
         FileUtils.rm_f(@tmp_file)
         FileUtils.rm_rf("tmp/OpenLayers-#{options.version}")
       end
+      
+      def ready
+        say ("OpenLayers #{options.version} is ready to use")
+        say_status("HAML", "= javascript_include_tag '/openlayers/OpenLayers.js'")
+        say_status("HTML", "<script src='/openlayers/OpenLayers.js' type='text/javascript'></script> ")
+        say_status("RequireJS", "require (['/openlayers/OpenLayers.js'];")
+      end
     end
   end
 end
