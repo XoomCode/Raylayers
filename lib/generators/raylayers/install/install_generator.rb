@@ -54,10 +54,11 @@ module Raylayers
       end
       
       def ready
-        say ("OpenLayers #{options.version} is ready to use")
-        say_status("HAML", "= javascript_include_tag '/openlayers/OpenLayers.js'")
-        say_status("HTML", "<script src='/openlayers/OpenLayers.js' type='text/javascript'></script> ")
-        say_status("RequireJS", "require (['/openlayers/OpenLayers.js'];")
+        msg = "\n\nOpenLayers #{options.version} is ready to use\n"
+        msg += "HAML => = javascript_include_tag '/openlayers/OpenLayers.js'\n"
+        msg += "HTML => <script src='/openlayers/OpenLayers.js' type='text/javascript'></script>\n"
+        msg += "RequireJS => require (['/openlayers/OpenLayers.js'];\n\n"
+        say (msg)
       end
     end
   end
