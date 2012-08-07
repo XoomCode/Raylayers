@@ -5,7 +5,7 @@ module Raylayers
   module Generators
     class InstallGenerator < ::Rails::Generators::Base
       desc "This generator downloads and installs OpenLayers"
-      class_option :version, :type => :string, :default => '2.10', :desc => "Which version of OpenLayers to fetch"
+      class_option :version, :type => :string, :default => '2.12', :desc => "Which version of OpenLayers to fetch"
 
       def download_openlayers
         @tmp_file = "tmp/OpenLayers-#{options.version}.zip"
