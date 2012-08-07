@@ -29,20 +29,12 @@ module Raylayers
         say_status("error", "could not unpack #{@tmp_file}", :red)
       end
       
-      def build_openlayers
-        say_status("building", "OpenLayers (#{options.version})", :green)
-        # TODO: ruby script?
-        Dir.chdir("tmp/OpenLayers-#{options.version}/build"){ system("python build.py 1> /dev/null")}
-      rescue
-        say_status("error", "could not build OpenLayers", :red)
-      end
-      
       def install_openlayers
         say_status("installing", "OpenLayers (#{options.version})", :green)
-        FileUtils.mkdir_p("public/openlayers/")
-        FileUtils.cp("tmp/OpenLayers-#{options.version}/build/OpenLayers.js", "public/openlayers/OpenLayers.js")
-        FileUtils.cp_r("tmp/OpenLayers-#{options.version}/theme", "public/openlayers/theme")
-        FileUtils.cp_r("tmp/OpenLayers-#{options.version}/img", "public/openlayers/img")
+        FileUtils.mkdir_p("vendor/assets/javascripts/openlayers/")
+        FileUtils.cp("tmp/OpenLayers-#{options.version}/OpenLayers.js", "vendor/assets/javascripts/openlayers/OpenLayers.js")
+        FileUtils.cp_r("tmp/OpenLayers-#{options.version}/theme", "vendor/assets/javascripts/openlayers/theme")
+        FileUtils.cp_r("tmp/OpenLayers-#{options.version}/img", "vendor/assets/javascripts/openlayers/img")
       rescue
         say_status("error", "could not install OpenLayers", :red)
       end
@@ -55,9 +47,7 @@ module Raylayers
       
       def ready
         msg = "\n\nOpenLayers #{options.version} is ready to use\n"
-        msg += "HAML => = javascript_include_tag '/openlayers/OpenLayers.js'\n"
-        msg += "HTML => <script src='/openlayers/OpenLayers.js' type='text/javascript'></script>\n"
-        msg += "RequireJS => require (['/openlayers/OpenLayers.js']);\n\n"
+        msg += "Just require it in application.js => //= require openlayers/OpenLayers\n\n"
         say (msg)
       end
     end
